@@ -45,12 +45,6 @@
             <scope>test</scope>
         </dependency>
 
-        <dependency>
-            <groupId>com.github.mlb</groupId>
-            <artifactId>common</artifactId>
-            <version>${mlb-common.version}</version>
-        </dependency>
-
     </dependencies>
 
     <dependencyManagement>
