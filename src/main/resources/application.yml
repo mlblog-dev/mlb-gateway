@@ -1,0 +1,14 @@
+server:
+  port: 8000
+spring:
+  application:
+    name: mlb-gateway
+  cloud:
+    nacos:
+      discovery:
+        server-addr: ${NACOS_SERVER}:8848
+      config:
+        server-addr: ${NACOS_SERVER}:8848
+        extension-configs:
+          - data-id: gateway-dev.yaml
+            refresh: true
