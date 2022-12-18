@@ -31,12 +31,13 @@ jobs:
       run: mvn -B package --file pom.xml
 
     - name: Build Image
-      run: docker build -t mlb-gateway:latest ./
+      run: docker build -t tb63319692/mlb-gateway:latest ./
 
     - name: Login to registry
       run: docker login --username=${{ secrets.DOCKER_USERNAME }} ${{ secrets.DOCKER_REPOSITORY }} --password ${{ secrets.DOCKER_PASSWORD }}
-  - name: Push Image
-      run: docker push mlb-gateway:latest
+
+    - name: Push Image
+      run: docker push tb63319692/mlb-gateway:latest
 
     # Optional: Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive
     - name: Update dependency graph
