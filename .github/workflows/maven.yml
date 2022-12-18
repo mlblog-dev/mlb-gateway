@@ -41,7 +41,7 @@ jobs:
       run: docker login --username=${{ secrets.DOCKER_USERNAME }} ${{ secrets.DOCKER_REPOSITORY }} --password ${{ secrets.DOCKER_PASSWORD }}
 
     - name: Push Image
-      run: docker push mlb-gateway:latest
+      run: docker push ${{ secrets.DOCKER_REPOSITORY }}:latest
 
   pull-docker:
       needs: [build]
