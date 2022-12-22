@@ -85,10 +85,8 @@
     <repositories>
         <repository>
             <id>github</id>
-            <url>https://maven.pkg.github.com/mlblog-dev/mlb-common</url>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
+            <name>GitHub mlblog-dev Apache Maven Packages</name>
+            <url>https://maven.pkg.github.com/mlblog-dev</url>
         </repository>
     </repositories>
 
